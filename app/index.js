@@ -1,12 +1,12 @@
 import React from 'react';
 import App from './App';
-import Store from '../lib/Store';
+import Dispatcher from '../lib/Dispatcher';
 import { SampleStore  } from '../lib/SampleStore';
 
-Store.register('samples', SampleStore, null);
-Store.subscribe('samples', 'change', function() {
+Dispatcher.register('samples', SampleStore, null);
+Dispatcher.subscribe('samples', 'change', function() {
     console.log('samples changed');
 });
-Store.dispatch({ actionType: 'createSample', text: 'Sample'});
+Dispatcher.dispatch({ actionType: 'createSample', text: 'Sample'});
 
 React.render(<App />, document.getElementById('app'));
