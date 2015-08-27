@@ -1,6 +1,7 @@
 import React from 'react';
 import Dispatcher from './Dispatcher';
 import NoteList from './NoteList';
+import NoteEntry from './NoteEntry';
 
 export default class App extends React.Component {  
     constructor(props) {
@@ -14,6 +15,7 @@ export default class App extends React.Component {
         return (
             <div>
                 <h1>Hello</h1>
+                <NoteEntry />
                 <NoteList notes={this.state.notes} />
             </div>
             );
