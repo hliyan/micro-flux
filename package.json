@@ -19,7 +19,8 @@
   "homepage": "https://github.com/hliyan/react-flux",
   "dependencies": {
     "flux": "^2.1.1",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "react-router": "^0.13.3"
   },
   "devDependencies": {
     "babel-core": "^5.8.22",
