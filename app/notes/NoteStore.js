@@ -1,4 +1,4 @@
-import BasicStore from '../lib/BasicStore';
+import BasicStore from '../../lib/BasicStore';
 
 export default class NoteStore extends BasicStore {
     onAction(action) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Note from './Note';
-import Dispatcher from './Dispatcher';
+import Dispatcher from '../Dispatcher';
 
 export default class NoteList extends React.Component {  
     constructor(props) {

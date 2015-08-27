@@ -1,5 +1,5 @@
 import Dispatcher from '../lib/Dispatcher';
-import NoteStore from './NoteStore';
+import NoteStore from './notes/NoteStore';
 
 class AppDispatcher extends Dispatcher {
     constructor() {
