@@ -5,20 +5,18 @@ import Dispatcher from '../Dispatcher';
 export default class NoteList extends React.Component {  
     constructor(props) {
         super(props);
-        this.handlers = {};
-        this.handlers.onStoreChange = this.onStoreChange.bind(this);
+
+        this.onStoreChange = () => {
+            this.forceUpdate();
+        };
     }
 
     componentWillMount() {
-        Dispatcher.subscribe('notes', 'change', this.handlers.onStoreChange);
+        Dispatcher.subscribe('notes', 'change', this.onStoreChange);
     }
 
     componentWillUnmount() {
-        Dispatcher.unsubscribe('notes', 'change', this.handlers.onStoreChange);
-    }
-
-    onStoreChange() {
-        this.forceUpdate();
+        Dispatcher.unsubscribe('notes', 'change', this.onStoreChange);
     }
 
     render() {
