@@ -8,7 +8,6 @@ export default class NoteIndex extends React.Component {
         super(props);
         this.state = {};
         this.state.notes = Dispatcher.get('notes');
-        Dispatcher.dispatch({ action: 'createNote', data: { key: 1, text: 'Sample Note'} });
     }
 
     render() {

@@ -5,10 +5,16 @@ import Dispatcher from '../Dispatcher';
 export default class NoteList extends React.Component {  
     constructor(props) {
         super(props);
+        this.handlers = {};
+        this.handlers.onStoreChange = this.onStoreChange.bind(this);
     }
 
     componentWillMount() {
-        Dispatcher.subscribe('notes', 'change', this.onStoreChange.bind(this));
+        Dispatcher.subscribe('notes', 'change', this.handlers.onStoreChange);
+    }
+
+    componentWillUnmount() {
+        Dispatcher.unsubscribe('notes', 'change', this.handlers.onStoreChange);
     }
 
     onStoreChange() {
@@ -22,7 +28,6 @@ export default class NoteList extends React.Component {
         });
         return (
             <div>
-                <h3>Notes</h3>
                 <ul>{noteElements}</ul>
             </div>
             );

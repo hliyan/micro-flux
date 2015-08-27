@@ -1,17 +1,18 @@
 import React from 'react';
-import Dispatcher from './Dispatcher';
-import NoteIndex from './NoteIndex';
+import Router from 'react-router';
+
+var RouteHandler = Router.RouteHandler;
 
 export default class App extends React.Component {  
     constructor(props) {
         super(props);
-        this.state = {};
     }
 
     render() {
         return (
             <div>
-                <NoteIndex />
+                <a href="#/">home</a> <a href="#/notes">notes</a> 
+                <RouteHandler/>
             </div>
         );
     }
