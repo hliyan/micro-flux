@@ -18,6 +18,6 @@ export default class App extends React.Component {
                 <NoteEntry />
                 <NoteList notes={this.state.notes} />
             </div>
-            );
+        );
     }
 }

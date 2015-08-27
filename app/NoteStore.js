@@ -5,7 +5,6 @@ export default class NoteStore extends BasicStore {
         switch(action.action) {
             case 'createNote':
                 this.create(action.data);
-                this.emit('change');
             break;
         }   
     }
