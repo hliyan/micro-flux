@@ -1,9 +1,18 @@
 import React from 'react';
 import Note from './Note';
+import Dispatcher from './Dispatcher';
 
 export default class NoteList extends React.Component {  
     constructor(props) {
         super(props);
+    }
+
+    componentWillMount() {
+        Dispatcher.subscribe('notes', 'change', this.onStoreChange.bind(this));
+    }
+
+    onStoreChange() {
+        this.forceUpdate();
     }
 
     render() {
