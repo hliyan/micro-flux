@@ -1,7 +1,7 @@
 import React from 'react';
 import Dispatcher from './Dispatcher';
-import NoteList from './NoteList';
-import NoteEntry from './NoteEntry';
+import NoteList from './notes/NoteList';
+import NoteEntry from './notes/NoteEntry';
 
 export default class App extends React.Component {  
     constructor(props) {
@@ -18,6 +18,6 @@ export default class App extends React.Component {
                 <NoteEntry />
                 <NoteList notes={this.state.notes} />
             </div>
-            );
+        );
     }
 }

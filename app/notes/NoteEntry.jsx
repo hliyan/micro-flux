@@ -1,5 +1,5 @@
 import React from 'react';
-import Dispatcher from './Dispatcher';
+import Dispatcher from '../Dispatcher';
 
 export default class NoteEntry extends React.Component {  
     constructor(props) {
