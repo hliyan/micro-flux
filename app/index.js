@@ -2,7 +2,7 @@ import React from 'react';
 import Router from 'react-router';
 import App from './App';
 import Index from './Index';
-import NoteIndex from './NoteIndex';
+import NoteIndex from './notes/NoteIndex';
 
 var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;

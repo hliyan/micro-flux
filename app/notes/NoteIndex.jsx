@@ -1,7 +1,7 @@
 import React from 'react';
-import Dispatcher from './Dispatcher';
-import NoteList from './notes/NoteList';
-import NoteEntry from './notes/NoteEntry';
+import Dispatcher from '../Dispatcher';
+import NoteList from './NoteList';
+import NoteEntry from './NoteEntry';
 
 export default class NoteIndex extends React.Component {  
     constructor(props) {
