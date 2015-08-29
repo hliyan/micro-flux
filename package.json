@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/hliyan/react-flux",
   "dependencies": {
+    "bluebird": "^2.9.34",
     "flux": "^2.1.1",
+    "jquery": "^2.1.4",
     "react": "^0.13.3",
     "react-router": "^0.13.3"
   },

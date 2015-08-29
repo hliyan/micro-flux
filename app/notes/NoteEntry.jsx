@@ -26,6 +26,6 @@ export default class NoteEntry extends React.Component {
     createNote() {
         this.setState({ lastKey: ++this.state.lastKey });
         Dispatcher.dispatch({ action: 'createNote', data: { key: this.state.lastKey, text: this.state.value } });
-        this.setState({ value: ' ' });
+        this.setState({ value: '' });
     }
 }
