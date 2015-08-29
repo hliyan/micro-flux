@@ -5,17 +5,23 @@ export default class NoteStore extends ArrayStore {
     constructor() {
         super();
         this.api = new RESTApi('api.foo.com');
+        this.lastKey = 0;
     }
 
     createNote(action) {
-        this.data.push(action.data);
+        let note = action.data;
+        note.key = ++this.lastKey;
+        this.data.push(note);
         this.emit('change');
     }
 
     downloadNotes(action) {
         this.api.get('/notes').then((res) => {
             if (res.code == 200) {
-                this.data = res.body.data;
+                res.body.data.forEach((note) => {
+                    this.data.push(note);
+                    this.lastKey = (note.key > this.lastKey) ? note.key : this.lastKey;
+                });
                 this.emit('change');
             } else {
                 this.emit('error');
