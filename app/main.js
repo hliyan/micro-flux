@@ -15,5 +15,5 @@ var routes = (
 );
 
 Router.run(routes, Router.HashLocation, (Root) => {
-  React.render(<Root/>, document.getElementById('app'));
+  React.render(<Root/>, document.body);
 });
