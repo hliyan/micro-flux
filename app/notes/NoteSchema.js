@@ -11,6 +11,7 @@ export default {
         text: {
             type: 'text',
             label: 'Note',
+            required: true,
             length: {
                 min: 0,
                 max: 100

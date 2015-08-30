@@ -32,10 +32,11 @@ export default class Input extends React.Component {
         let entityName = this.props.schema.name.singular;
         let fieldName = this.props.fieldName;
         let fieldSchema = this.props.schema.fields[fieldName];
+        let id = entityName + '.' + fieldName;
         return (
             <div>
                 <label style={this.state.style.label}>{fieldSchema.label}</label> 
-                <input style={this.state.style.input} id={entityName + '.' + fieldName} type={fieldSchema.type} value={this.props.value} onChange={this._onChange} />
+                <input style={this.state.style.input} id={id} type={fieldSchema.type} value={this.props.value} onChange={this._onChange} />
             </div>
         );
     }
