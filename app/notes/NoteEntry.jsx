@@ -1,24 +1,27 @@
 import React from 'react';
 import Dispatcher from '../Dispatcher';
+import NoteSchema from './NoteSchema';
+import Input from '../../lib/ui/Input';
 
 export default class NoteEntry extends React.Component {  
     constructor(props) {
         super(props);
         this.state = { value: ''};
 
-        this.onChangeText = (e) => {
-            this.setState({ value: e.target.value });
-        };
-
         this.onAddButton = (e) => {
             this.createNote();
+        };
+
+        this.onChange = (value) => {
+            this.setState({ value: value });
         };
     }
 
     render() {
         return (
             <div>
-                <input type="text" value={this.state.value} onChange={this.onChangeText} /> <button onClick={this.onAddButton} >+</button>
+                <Input schema={NoteSchema} fieldName='text' value={this.state.value} onChange={this.onChange} />
+                <button onClick={this.onAddButton} >Create Note</button>
             </div>
         );
     }
