@@ -1,6 +1,6 @@
 {
-  "name": "react-flux",
-  "version": "1.0.0",
+  "name": "micro-flux",
+  "version": "0.1",
   "description": "Yet another react-flux",
   "main": "src/index.js",
   "scripts": {
