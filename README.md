@@ -1,37 +1,24 @@
 # micro-flux.js
 
-A simplified React/Flux framework for beginners. Still a work in progress.
+*micro-flux* is a simplified [Flux](https://github.com/facebook/flux) framework for [React.js](https://github.com/facebook/react). It deviates from Facebook's recommendations in a few places, in the interest of helping beginners get started quickly. The framework is still a work in progress.
 
-## How to run the test app
+# Getting started
+
+## How to install
 
 ```
-git clone git@github.com:hliyan/micro-flux.git
-cd micro-flux
-npm install
-gulp
-cd tests/notes-app
-npm install
-npm start
-http://localhost:8080/webpack-dev-server/
+npm install micro-flux
 ```
 
-## Using the dispatcher
+## How to create a store
+
+miro-flux comes with a simple array store, which you can extend like this:
 
 ```javascript
-var dispatcher = new Dispatcher();
-dispatcher.register('notes', new NoteStore());
-dispatcher.subscribe('notes', 'change', function() {});
-dispatcher.dispatch({ action: 'createNote', text: 'Hello'});
-```
+import uflux from 'micro-flux';
+var ArrayStore = uflux.storage.ArrayStore;
 
-## Using a store
-
-```javascript
 export default class NoteStore extends ArrayStore {
-    constructor() {
-        super();
-    }
-
     // handles the action 'createNote'
     createNote(action) {
         this._insert(action.data);
@@ -39,3 +26,41 @@ export default class NoteStore extends ArrayStore {
     }
 }
 ```
+
+## How to use the dispatcher
+
+```javascript
+import uflux from 'micro-flux';
+var Dispatcher = uflux.Dispatcher;
+
+var dispatcher = new Dispatcher();
+
+// register a store to receive dispatched actions
+dispatcher.register('notes', new NoteStore());
+
+// register a callback to receive events from stores
+dispatcher.subscribe('notes', 'change', function() {
+    console.log('notes changed');
+});
+
+// dispatch an event
+dispatcher.dispatch({ action: 'createNote', text: 'Hello'});
+```
+
+
+## How to run the sample app
+
+You can find some sample apps at [micro-flux-sample-apps](https://github.com/hliyan/micro-flux-sample-apps). To run the notes app:
+
+```
+git clone git@github.com:hliyan/micro-flux-sample-apps.git
+cd micro-flux-sample-apps/notes-app
+npm install
+npm test
+http://localhost:8080/webpack-dev-server/
+```
+
+
+# API documentation
+
+- TODO
