@@ -1,6 +1,6 @@
 {
   "name": "micro-flux",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simplified React/Flux framework for beginners.",
   "keywords": [
     "react",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:hliyan/react-flux.git"
+    "url": "git@github.com:hliyan/micro-flux.git"
   },
   "author": {
     "name": "Hasitha Liyanage",
@@ -23,9 +23,9 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hliyan/react-flux/issues"
+    "url": "https://github.com/hliyan/micro-flux/issues"
   },
-  "homepage": "https://github.com/hliyan/react-flux",
+  "homepage": "https://github.com/hliyan/micro-flux",
   "dependencies": {
     "bluebird": "^2.9.34",
     "flux": "^2.1.1",
