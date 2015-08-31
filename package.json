@@ -1,17 +1,26 @@
 {
   "name": "micro-flux",
-  "version": "0.1",
-  "description": "Yet another react-flux",
+  "version": "0.1.0",
+  "description": "A simplified React/Flux framework for beginners.",
+  "keywords": [
+    "react",
+    "flux",
+    "router",
+    "store",
+    "ui"
+  ],
   "main": "src/index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:hliyan/react-flux.git"
   },
-  "author": "Hasitha Liyanage",
+  "author": {
+    "name": "Hasitha Liyanage",
+    "email": "hasithaliyan@gmail.com",
+    "url": "hliyan.github.io"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hliyan/react-flux/issues"
@@ -26,11 +35,8 @@
   },
   "devDependencies": {
     "babel-core": "^5.8.22",
-    "babel-loader": "^5.3.2",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.1",
-    "node-libs-browser": "^0.5.2",
-    "webpack": "^1.11.0",
-    "webpack-dev-server": "^1.10.1"
+    "node-libs-browser": "^0.5.2"
   }
 }
