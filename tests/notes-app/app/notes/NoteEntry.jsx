@@ -1,7 +1,7 @@
 import React from 'react';
 import Dispatcher from '../Dispatcher';
 import NoteSchema from './NoteSchema';
-import Input from '../../lib/ui/Input';
+import Input from '../../../../dist/ui/Input';
 
 export default class NoteEntry extends React.Component {  
     constructor(props) {

@@ -1,4 +1,4 @@
-import Dispatcher from '../lib/Dispatcher';
+import Dispatcher from '../../../dist/Dispatcher';
 import NoteStore from './notes/NoteStore';
 
 class AppDispatcher extends Dispatcher {
