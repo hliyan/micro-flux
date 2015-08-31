@@ -1,4 +1,0 @@
-terminal.glue
-build/*
-node_modules/*
-npm-debug.log
