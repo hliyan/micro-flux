@@ -1,5 +1,5 @@
-import ArrayStore from '../../lib/storage/ArrayStore';
-import RESTApi from '../../lib/net/RESTApi';
+import ArrayStore from '../../../../dist/storage/ArrayStore';
+import RESTApi from '../../../../dist/net/RESTApi';
 
 export default class NoteStore extends ArrayStore {
     constructor() {
